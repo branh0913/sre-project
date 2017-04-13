@@ -9,7 +9,6 @@ Vagrant.configure("2") do |config|
     end
     master_config.vm.network "private_network", ip: "192.168.30.10"
     master_config.vm.synced_folder "states", "/srv/salt"
-    master_config.vm.synced_folder "pillars", "/srv/pillars"
   end
   config.vm.define :nginx_server_ubuntu do |ubuntu_nginx|
      ubuntu_nginx.vm.box = "bento/ubuntu-16.04"
